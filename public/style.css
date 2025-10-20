@@ -1,0 +1,684 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #0b0020, #26004a, #ff9c00);
+  color: white;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  animation: gradientBG 15s ease infinite;
+}
+
+
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navbar a:hover, .navbar a.active {
+  color: #fff;
+  text-shadow: 0 0 10px #ffd700;
+}
+
+.hero {
+  padding: 100px 20px;
+  text-align: center;
+  background: url('images/diya.png') center/cover no-repeat;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ff8c00; }
+  to { text-shadow: 0 0 30px #ffd700, 0 0 50px #ff8c00; }
+}
+
+.section {
+  text-align: center;
+  padding: 60px 20px;
+
+}
+
+.section img {
+  width: 60%;
+  max-width: 400px;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 0 20px #ffd700;
+  transition: transform 0.3s ease;
+
+  
+}
+
+  
+
+.section img:hover {
+  transform: scale(1.05);
+}
+
+
+
+.fireworks {
+  background: radial-gradient(circle, rgba(255,255,255,0.05), rgba(0,0,0,0.5));
+  animation: bgPulse 5s infinite alternate;
+}
+.p{
+    padding-left: 5rem;
+    font-size: 12px;
+    
+}
+
+@keyframes bgPulse {
+  from { background-color: #1a0033; }
+  to { background-color: #330066; }
+}
+
+form {
+  margin-top: 20px;
+}
+
+input, textarea {
+  width: 80%;
+  margin: 8px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  background: #ffcc00;
+  color: #26004a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: -7rem;
+
+
+ 
+
+}
+
+button:hover {
+  background: #ffd633;
+}
+/* 
+#wishesContainer {
+  margin-top: 20px;
+}
+
+.wish-item {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 10px;
+  width: 80%;
+  animation: fadeIn 0.8s ease;
+} */
+/* .wishes-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #ffcc00;
+  border-radius: 20px;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow-y: auto;
+  max-height: 300px;
+  box-shadow: 0 0 30px #ffd700;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wishes-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 50px #ffd700;
+}
+
+.wish-item {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.wish-item:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+
+.wish-item h3 {
+  margin: 0 0 5px 0;
+  color: #ffd700;
+}
+
+.wish-item p {
+  margin: 0;
+} */
+
+/* Form container styling */
+h1,h2,#wishList{
+    text-align: center;
+padding: 1rem;
+}
+#wishForm {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #ffcc00;
+  border-radius: 20px;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 0 30px #ffd700;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#wishForm:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 50px #ffd700;
+}
+
+/* Input and textarea styling */
+#wishForm input,
+#wishForm textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s, background 0.3s;
+  width: 92%;
+}
+
+#wishForm input::placeholder,
+#wishForm textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#wishForm input:focus,
+#wishForm textarea:focus {
+  border-color: #ffd700;
+  background: rgba(255, 255, 255, 0.1);
+
+}
+
+/* Button styling */
+#wishForm button {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  background: #ffd700;
+  color: #000;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  width: 94%;
+  margin-left: 1rem;
+}
+
+#wishForm button:hover {
+  background: #ffcc00;
+  transform: scale(1.05);
+}
+
+/* Container for the wishes box */
+#wishList {
+  background: rgba(255, 255, 255, 0.1); /* Transparent box */
+  border: 2px solid #ffd700;            /* Golden border */
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 70%;
+  max-width: 600px;
+  max-height: 400px;      /* Scrollable if many wishes */
+  overflow-y: auto;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+  animation: fadeIn 1s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-weight: 800;
+}
+/* Wish sender name */
+.sender-name {
+  color:yellow; /* Golden color for sender */
+  font-weight: bold;
+  font-size: larger;
+}
+
+/* Wish message */
+.wish-message {
+  color: #ffffff; /* White color for the message */
+}
+
+/* Hover effect for the whole box */
+#wishList:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 50px #ffd700;
+}
+
+/* Each wish inside the box */
+#wishList li {
+  margin: 10px 0;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+  list-style: none;
+}
+
+/* Fade-in animation for the box */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Scrollbar styling */
+#wishList::-webkit-scrollbar {
+  width: 8px;
+}
+
+#wishList::-webkit-scrollbar-thumb {
+  background: rgba(255, 215, 0, 0.5);
+  border-radius: 10px;
+}
+
+#wishList::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+/*footer*/
+footer {
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  color: #ffd700;
+}
+
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 10px 0;
+}
+
+footer .social-icon img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s, filter 0.3s;
+  border-radius: 10px;
+}
+
+footer .social-icon img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 5px #ffd700);
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+}
+
+.about {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.about img {
+  width: 50%;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 20px #ffd700;
+}
+
+
+video{
+    height: 30rem;
+    padding-left: 25rem;
+    
+}
+
+
+
+/* Small devices (mobiles, max-width: 600px) */
+@media (max-width: 600px) {
+  .hero {
+    padding: 60px 10px;
+    background-size: contain;
+  }
+
+  .section img {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  input, textarea {
+    width: 90%;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .p {
+    padding-left: 1rem;
+    font-size: 10px;
+  }
+}
+
+/* Medium devices (tablets, 601px - 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .hero {
+    padding: 80px 15px;
+  }
+
+  .section img {
+    width: 70%;
+    max-width: 350px;
+  }
+
+  input, textarea {
+    width: 85%;
+  }
+}
+
+/* Large devices (laptops, 901px - 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .hero {
+    padding: 100px 20px;
+  }
+
+  .section img {
+    width: 60%;
+    max-width: 400px;
+  }
+
+  input, textarea {
+    width: 80%;
+  }
+}
+
+/* Extra large devices (desktop, above 1200px) */
+@media (min-width: 1201px) {
+  .hero {
+    padding: 120px 20px;
+  }
+
+  .section img {
+    width: 60%;
+    max-width: 450px;
+  }
+
+  input, textarea {
+    width: 60%;
+  }
+}
+
+/* ---------------- Base Styles (keep your current design) ---------------- */
+h1, h2, #wishList {
+    text-align: center;
+    padding: 1rem;
+}
+
+#wishForm {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #ffcc00;
+  border-radius: 20px;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 0 30px #ffd700;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#wishForm:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 50px #ffd700;
+}
+
+#wishForm input,
+#wishForm textarea {
+  width: 92%;
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s, background 0.3s;
+}
+
+#wishForm input::placeholder,
+#wishForm textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#wishForm input:focus,
+#wishForm textarea:focus {
+  border-color: #ffd700;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#wishForm button {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  background: #ffd700;
+  color: #000;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  width: 94%;
+  margin-left: 1rem;
+}
+
+#wishForm button:hover {
+  background: #ffcc00;
+  transform: scale(1.05);
+}
+
+#wishList {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #ffd700;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 70%;
+  max-width: 600px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+  animation: fadeIn 1s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-weight: 800;
+}
+
+.sender-name {
+  color: yellow;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.wish-message {
+  color: #ffffff;
+}
+
+#wishList:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 50px #ffd700;
+}
+
+#wishList li {
+  margin: 10px 0;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+  list-style: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+  color: #ffd700;
+}
+
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 10px 0;
+}
+
+footer .social-icon img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s, filter 0.3s;
+  border-radius: 10px;
+}
+
+footer .social-icon img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 5px #ffd700);
+}
+
+/* About Section */
+.about {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.about img {
+  width: 50%;
+  max-width: 400px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 20px #ffd700;
+}
+
+/* Video */
+video {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 15px;
+}
+
+/* ---------------- Responsive Styles ---------------- */
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  #wishForm {
+    width: 95%;
+    padding: 15px;
+  }
+  #wishForm input, #wishForm textarea, #wishForm button {
+    width: 100%;
+    margin-left: 0;
+  }
+  #wishList {
+    width: 95%;
+    padding: 15px;
+  }
+  .about img {
+    width: 90%;
+  }
+  video {
+    max-width: 95%;
+  }
+}
+
+/* Tablet (601px - 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  #wishForm {
+    width: 90%;
+  }
+  #wishList {
+    width: 85%;
+  }
+  .about img {
+    width: 70%;
+  }
+  video {
+    max-width: 90%;
+  }
+}
+
+/* Laptop/Desktop (901px+) */
+@media (min-width: 901px) {
+  #wishForm {
+    width: 80%;
+  }
+  #wishList {
+    width: 70%;
+  }
+  .about img {
+    width: 50%;
+  }
+  video {
+    max-width: 800px;
+  }
+}
